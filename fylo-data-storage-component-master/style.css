@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+/* font-family: 'Raleway', sans-serif; */
+/* - Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%)
+- Pale Blue: hsl(243, 100%, 93%)
+- Grayish Blue: hsl(229, 7%, 55%)
+- Dark Blue: hsl(228, 56%, 26%)
+- Very Dark Blue: hsl(229, 57%, 11%) */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+/* For mobile 375px */
+
+body {
+   background: url(images/bg-mobile.png);
+   font-family: 'Raleway', sans-serif;
+   font-size: 14px;
+   background-position: bottom;
+   background-color: hsl(229, 57%, 11%);
+}
+
+section {
+   height: 100vh;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.boxOne  {
+   width: 90%;
+   background-color: hsl(228, 56%, 26%);
+   border-radius: 10px 100px 10px 10px;
+}
+
+.logo {
+   margin: 9%;
+}
+
+.icon {
+   display: flex;
+   align-items: center;
+   margin-left: 9%;
+   margin-bottom: 9%;
+   width: 50%;
+   justify-content: space-between;
+}
+
+.document, .folder, .upload {
+   background-color: hsl(229, 7%, 5%);
+   padding: 12%;
+   height: 20px;
+   width: 20px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 10px;
+}
+
+.boxTwo {
+   color: white;
+   width: 90%;
+   background-color: hsl(228, 56%, 26%);
+   margin-top: 5%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   border-radius: 10px;
+}
+
+.text {
+   margin-top: 10px;
+}
+
+.text span {
+   font-weight: bolder;
+}
+
+.bar {
+   background-color: hsl(229, 57%, 11%);
+   width: 90%;
+   margin-top: 5%;
+   padding: 1%;
+   border-radius: 20px;
+}
+
+.bar .insidebar {
+   border-radius: 20px;
+   width: 81.5%;
+   background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+   display: flex;
+   justify-content: flex-end;
+}
+
+.bar .insidebar .whiteball {
+   height: 10px;
+   background-color: white;
+   width: 4%;
+   border-radius: 10px;
+}
+
+.chat {
+   padding: 10px 30px;
+   color: hsl(229, 57%, 11%);
+   font-size: 40px;
+   font-weight: 700;
+   background-color: #fff;
+   border-radius: 10px;
+   position: absolute;
+   top: 65%;
+   /* right: 30%; */
+}
+
+.chat span {
+   font-size: 12px;
+   font-weight: 400;
+   color: hsl(229, 57%, 11%);
+}
+
+.chat:after {
+   display: none;
+}
+
+.limit {
+   display: flex;
+   justify-content: space-between;
+   width: 90%;
+   font-weight: bold;
+   margin-top: 3%;
+   margin-bottom: 15%;
+}
+
+/* Desktop: 1440px */
+
+@media only screen and (min-width: 750px) {
+   body {
+      background-image: url(images/bg-desktop.png);
+      background-repeat: repeat-x;
+      background-position-y: bottom;
+      background-color: hsl(229, 57%, 11%);
+   }
+
+   section {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-content: center;
+   }
+   .boxOne {
+      width: 25%;
+      margin-right: 2%;
+   }
+
+   .boxTwo {
+      width: 45%;
+      margin-left: .5%;
+      margin-bottom: 1%;
+   }
+
+   .chat {
+      color: hsl(229, 57%, 11%);
+      font-weight: 700;
+      font-size: 32px;
+      padding: 15px 30px;
+      background-color: #fff;
+      border-radius: 10px 10px 0 10px;
+      position: absolute;
+      top: 450px;
+      right: 235px;
+      z-index: 1;
+   }
+
+   .chat span {
+      font-size: 12px;
+      font-weight: 400;
+      color: hsl(229, 57%, 11%);
+   }
+
+   .chat::after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      position: absolute;
+      top: 60%;
+      border-top:  50px solid #fff;
+      border-left:  50px solid transparent;
+      border-right: 0px solid transparent;
+      border-bottom: 0px solid transparent;
+      left: 119px;
+      z-index: -1;
+   }
+
+   .text {
+      margin-top: 5%;
+      align-self: flex-start;
+      margin-left: 5%;
+      color: hsl(243, 100%, 93%);
+   }
+
+   .text span {
+      color: rgb(255, 250, 250);
+   }
+
+   .bar {
+      margin-top: 3%;
+      padding: .5%;
+   }
+   .bar .insidebar .whiteball {
+      width: 2%;
+   }
+   .limit {
+      margin-top: 1%;
+      margin-bottom: 3%;
+   }
+}
