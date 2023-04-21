@@ -93,6 +93,7 @@ section {
    background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
    display: flex;
    justify-content: flex-end;
+   position: relative;/* Add position relative to the parent element */
 }
 
 .bar .insidebar .whiteball {
